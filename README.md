@@ -16,7 +16,7 @@ npm install sugar-chalk --save-dev
 
 ## Usage
 ```js
-import { info } from 'sugar-chalk'
+const { info } = require('sugar-chalk')
 
 info('Started script', 'Some message', 'Some other message')
 ```
