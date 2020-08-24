@@ -14,7 +14,7 @@ npm install sugar-chalk --save-dev
 ```js
 import { info } from 'sugar-chalk'
 
-info('Started script')
+info('Started script', 'Some message', 'Some other message')
 warn('This action will take some tile')
 error('there was an error running the script')
 ```
@@ -26,7 +26,9 @@ Alias to [Chalk](https://github.com/chalk/chalk)
 ### `done('message')`
 ### `error('message')`
 ### `info('message')`
+Sends message with prefix INFO.
+
 ### `log('message')`
-Log message with empty prefix.
+Log message with prefix LOG.
 
 ### `warn('message')`

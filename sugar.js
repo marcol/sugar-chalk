@@ -1,6 +1,10 @@
 const chalk = require('chalk')
 const LOG = chalk.bgBlack.white.bold(' LOG ')
 const INFO = chalk.bgBlue.black.bold(' INFO ')
+const DONE = chalk.bgGreen.white.bold(' DONE ')
+const PASS = chalk.bgGreen.white.bold(' PASS ')
+const ERROR = chalk.bgRed.white.bold(' ERROR ')
+const WARN = chalk.bgYellow.white.bold(' WARN ')
 
 function log (msg) {
   if (process.env.TEST) {
@@ -11,8 +15,21 @@ function log (msg) {
 }
 
 module.exports.clear = null
-module.exports.done = null
-module.exports.error = null
+
+module.exports.done = (...msg) => {
+  msg.unshift(DONE)
+  return log(msg)
+}
+
+module.exports.pass = (...msg) => {
+  msg.unshift(PASS)
+  return log(msg)
+}
+
+module.exports.error = (...msg) => {
+  msg.unshift(ERROR)
+  return log(msg)
+}
 
 module.exports.info = (...msg) => {
   msg.unshift(INFO)
@@ -24,5 +41,9 @@ module.exports.log = (...msg) => {
   return log(msg)
 }
 
-module.exports.warn = null
+module.exports.warn = (...msg) => {
+  msg.unshift(WARN)
+  return log(msg)
+}
+
 module.exports.chalk = chalk
