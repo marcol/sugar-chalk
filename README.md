@@ -22,8 +22,11 @@ error('there was an error running the script')
 ## API
 ### `chalk('message')`
 Alias to [Chalk](https://github.com/chalk/chalk)
+
+### `done('message')`
 ### `error('message')`
 ### `info('message')`
 ### `log('message')`
-Alias to `info`.
+Log message with empty prefix.
+
 ### `warn('message')`
