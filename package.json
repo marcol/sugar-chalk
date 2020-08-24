@@ -1,22 +1,33 @@
 {
-  "name": "sugar_chalk",
-  "version": "0.1.0",
-  "description": "sugar_chalk",
-  "keywords": [],
-  "homepage": "",
-  "bugs": "",
+  "name": "sugar-chalk",
+  "version": "1.0.0",
+  "description": "Sugar syntax for chalk",
+  "keywords": [
+    "chalk",
+    "sugar",
+    "console",
+    "bash",
+    "log",
+    "console.log",
+    "cli"
+  ],
+  "homepage": "https://github.com/marcol/sugar-chalk",
+  "bugs": "https://github.com/marcol/sugar-chalk/issues",
   "license": "ISC",
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "https://github.com/marcol/sugar-chalk.git"
   },
   "author": "Marco Dias Lopes <rhino@pacodacomenda.com>",
   "scripts": {
-    "lint:js": "eslint .; exit 0",
     "lint": "yarn lint:js; yarn lint:md",
-    "lint:md": "remark .; exit 0"
+    "lint:js": "eslint .; exit 0",
+    "lint:md": "remark .; exit 0",
+    "test": ""
   },
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^4.1.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.2",
