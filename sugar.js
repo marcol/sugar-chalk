@@ -1,21 +1,27 @@
 const chalk = require('chalk')
-const SPACE = '       '
+const LOG = chalk.bgBlack.white.bold(' LOG ')
+const INFO = chalk.bgBlue.black.bold(' INFO ')
 
-function log (...args) {
+function log (msg) {
   if (process.env.TEST) {
-    return args.join(' ')
+    return msg.join(' ')
   } else {
-    console.log.apply(null, args)
+    return console.log.apply(null, msg)
   }
 }
 
 module.exports.clear = null
 module.exports.done = null
 module.exports.error = null
-module.exports.info = null
 
-module.exports.log = (msg) => {
-  return log(SPACE, msg)
+module.exports.info = (...msg) => {
+  msg.unshift(INFO)
+  return log(msg)
+}
+
+module.exports.log = (...msg) => {
+  msg.unshift(LOG)
+  return log(msg)
 }
 
 module.exports.warn = null
