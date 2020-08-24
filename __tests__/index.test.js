@@ -1,7 +1,6 @@
 const { chalk, log } = require('../sugar')
 const original = require('chalk')
-const MSG = 'My test message'
-const SPACE = '       '
+const mocks = require('../__mocks__/mocks')
 
 process.env.TEST = true
 
@@ -11,6 +10,6 @@ describe('tests sugar chark functionality', () => {
   })
 
   it('checks log', () => {
-    expect(log(MSG)).toBe(SPACE + ' ' + MSG)
+    expect(log(mocks.MSG)).toBe(mocks.SPACE + ' ' + mocks.MSG)
   })
 })
