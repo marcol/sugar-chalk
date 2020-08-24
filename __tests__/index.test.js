@@ -1,10 +1,14 @@
-const { chalk, done, error, info, log, pass, warn } = require('../sugar')
+const { chalk, clear, done, error, info, log, pass, warn } = require('../sugar')
 const original = require('chalk')
 const mocks = require('../__mocks__/mocks')
 
 process.env.TEST = true
 
 describe('tests sugar chark functionality', () => {
+  it('checks clear', () => {
+    clear()
+  })
+
   it('checks chalk', () => {
     expect(chalk).toEqual(original)
   })

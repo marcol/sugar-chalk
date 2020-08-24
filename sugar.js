@@ -1,10 +1,5 @@
 const chalk = require('chalk')
-const LOG = chalk.bgBlack.white.bold(' LOG ')
-const INFO = chalk.bgBlue.black.bold(' INFO ')
-const DONE = chalk.bgGreen.white.bold(' DONE ')
-const PASS = chalk.bgGreen.white.bold(' PASS ')
-const ERROR = chalk.bgRed.white.bold(' ERROR ')
-const WARN = chalk.bgYellow.white.bold(' WARN ')
+const readline = require('readline')
 
 function log (msg) {
   if (process.env.TEST) {
@@ -14,35 +9,40 @@ function log (msg) {
   }
 }
 
-module.exports.clear = null
+module.exports.clear = () => {
+  const blank = '\n'.repeat(process.stdout.rows)
+  console.log(blank)
+  readline.cursorTo(process.stdout, 0, 0)
+  readline.clearScreenDown(process.stdout)
+}
 
 module.exports.done = (...msg) => {
-  msg.unshift(DONE)
+  msg.unshift(chalk.bgGreen.white.bold(' DONE '))
   return log(msg)
 }
 
 module.exports.pass = (...msg) => {
-  msg.unshift(PASS)
+  msg.unshift(chalk.bgGreen.white.bold(' PASS '))
   return log(msg)
 }
 
 module.exports.error = (...msg) => {
-  msg.unshift(ERROR)
+  msg.unshift(chalk.bgRed.white.bold(' ERROR '))
   return log(msg)
 }
 
 module.exports.info = (...msg) => {
-  msg.unshift(INFO)
+  msg.unshift(chalk.bgBlue.black.bold(' INFO '))
   return log(msg)
 }
 
 module.exports.log = (...msg) => {
-  msg.unshift(LOG)
+  msg.unshift(chalk.bgBlack.white.bold(' LOG '))
   return log(msg)
 }
 
 module.exports.warn = (...msg) => {
-  msg.unshift(WARN)
+  msg.unshift(chalk.bgYellow.white.bold(' WARN '))
   return log(msg)
 }
 
