@@ -20,9 +20,9 @@
   },
   "author": "Marco Dias Lopes <rhino@pacodacomenda.com>",
   "scripts": {
-    "lint": "yarn lint:js; yarn lint:md",
-    "lint:js": "eslint .; exit 0",
-    "lint:md": "remark .; exit 0",
+    "lint": "yarn lint:js && yarn lint:md",
+    "lint:js": "eslint .",
+    "lint:md": "remark .",
     "test": "jest"
   },
   "dependencies": {
