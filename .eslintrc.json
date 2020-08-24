@@ -3,7 +3,7 @@
     "browser": true,
     "node": true,
     "es6": true,
-    "mocha": true
+    "jest/globals": true
   },
   "extends": "standard",
   "globals": {
@@ -19,7 +19,7 @@
     "markdown",
     "json-format",
     "filenames",
-    "mocha"
+    "jest"
   ],
   "rules": {
     "indent": ["warn", 2],

@@ -20,3 +20,10 @@ error('there was an error running the script')
 ```
 
 ## API
+### `chalk('message')`
+Alias to [Chalk](https://github.com/chalk/chalk)
+### `error('message')`
+### `info('message')`
+### `log('message')`
+Alias to `info`.
+### `warn('message')`
