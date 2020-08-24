@@ -1,22 +1,33 @@
 {
-  "name": "sugar_chalk",
-  "version": "0.1.0",
-  "description": "sugar_chalk",
-  "keywords": [],
-  "homepage": "",
-  "bugs": "",
+  "name": "sugar-chalk",
+  "version": "1.0.0",
+  "description": "Sugar syntax for chalk",
+  "keywords": [
+    "chalk",
+    "sugar",
+    "console",
+    "bash",
+    "log",
+    "console.log",
+    "cli"
+  ],
+  "homepage": "https://github.com/marcol/sugar-chalk",
+  "bugs": "https://github.com/marcol/sugar-chalk/issues",
   "license": "ISC",
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "https://github.com/marcol/sugar-chalk.git"
   },
   "author": "Marco Dias Lopes <rhino@pacodacomenda.com>",
   "scripts": {
-    "lint:js": "eslint .; exit 0",
     "lint": "yarn lint:js; yarn lint:md",
-    "lint:md": "remark .; exit 0"
+    "lint:js": "eslint .; exit 0",
+    "lint:md": "remark .; exit 0",
+    "test": "jest"
   },
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^4.1.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.2",
@@ -26,23 +37,23 @@
     "eslint-plugin-filenames": "^1.3.2",
     "eslint-plugin-html": "^6.0.3",
     "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.20.0",
     "eslint-plugin-json-format": "^2.0.1",
     "eslint-plugin-markdown": "^1.0.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.5",
+    "jest": "^26.4.2",
     "remark-cli": "^8.0.1",
     "remark-lint": "^7.0.1",
     "remark-preset-lint-markdown-style-guide": "^3.0.1"
   },
   "husky": {
-    "husky": {
-      "hooks": {
-        "pre-push": "yarn test",
-        "pre-commit": "yarn lint",
-        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-      }
+    "hooks": {
+      "pre-push": "yarn test",
+      "pre-commit": "yarn lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }
