@@ -29,19 +29,28 @@ Alias to [Chalk](https://github.com/chalk/chalk)
 Clears screen.
 
 ### `done('message')`
-Sends message with prefix DONE.
+Sends message (`console.info`) with prefix DONE.
 
-### `error('message')`
-Sends message with prefix ERROR.
-
-### `info('message')`
-Sends message with prefix INFO.
-
-### `log('message')`
-Log message with prefix LOG.
+### `fail('message')`
+Sends message (`console.error`) with prefix FAIL.
 
 ### `pass('message')`
-Sends message with prefix PASS.
+Sends message (`console.info`) with prefix PASS.
+
+### `error('message')`
+Sends message (`console.error`) with prefix ERROR.
+
+### `info('message')`
+Sends message (`console.info`) with prefix INFO.
+
+### `log('message')`
+Log message (`console.log`) with prefix LOG and time of the log.
+
+### `debug('message')`
+Log message (`console.debug`) with prefix DEBUG.
 
 ### `warn('message')`
-Log message with prefix WARN.
+Log message (`console.warn`) with prefix WARN.
+
+### Suppress logs
+You can suppress logs by setting `process.env.TEST` to true.
