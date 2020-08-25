@@ -31,6 +31,12 @@ Clears screen.
 ### `done('message')`
 Sends message with prefix DONE.
 
+### `fail('message')`
+Sends message with prefix FAIL.
+
+### `pass('message')`
+Sends message with prefix PASS.
+
 ### `error('message')`
 Sends message with prefix ERROR.
 
@@ -40,8 +46,8 @@ Sends message with prefix INFO.
 ### `log('message')`
 Log message with prefix LOG.
 
-### `pass('message')`
-Sends message with prefix PASS.
-
 ### `warn('message')`
 Log message with prefix WARN.
+
+### Suppress logs
+You can suppress logs by setting `process.env.TEST` to true.

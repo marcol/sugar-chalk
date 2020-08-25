@@ -26,6 +26,11 @@ module.exports.pass = (...msg) => {
   return log(msg)
 }
 
+module.exports.fail = (...msg) => {
+  msg.unshift(chalk.bgRed.white.bold(' FAIL '))
+  return log(msg)
+}
+
 module.exports.error = (...msg) => {
   msg.unshift(chalk.bgRed.white.bold(' ERROR '))
   return log(msg)

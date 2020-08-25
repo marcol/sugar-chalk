@@ -1,4 +1,4 @@
-const { chalk, clear, done, error, info, log, pass, warn } = require('../sugar')
+const { chalk, clear, done, error, fail, info, log, pass, warn } = require('../sugar')
 const original = require('chalk')
 const mocks = require('../__mocks__/mocks')
 
@@ -35,6 +35,10 @@ describe('tests sugar chark functionality', () => {
 
   it('checks error', () => {
     expect(error(mocks.MSG)).toBe(mocks.ERROR + ' ' + mocks.MSG)
+  })
+
+  it('checks fail', () => {
+    expect(fail(mocks.MSG)).toBe(mocks.FAIL + ' ' + mocks.MSG)
   })
 
   it('checks warn', () => {
