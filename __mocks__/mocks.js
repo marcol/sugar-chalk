@@ -9,5 +9,6 @@ module.exports = {
   PASS: chalk.bgGreen.white.bold(' PASS '),
   ERROR: chalk.bgRed.white.bold(' ERROR '),
   WARN: chalk.bgYellow.white.bold(' WARN '),
-  FAIL: chalk.bgRed.white.bold(' FAIL ')
+  FAIL: chalk.bgRed.white.bold(' FAIL '),
+  DEBUG: chalk.bgMagenta.white.bold(' DEBUG ')
 }

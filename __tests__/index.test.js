@@ -1,4 +1,4 @@
-const { chalk, clear, done, error, fail, info, log, pass, warn } = require('../sugar')
+const { chalk, clear, debug, done, error, fail, info, log, pass, warn } = require('../sugar')
 const original = require('chalk')
 const mocks = require('../__mocks__/mocks')
 
@@ -14,19 +14,19 @@ describe('tests sugar chark functionality', () => {
   })
 
   it('checks log', () => {
-    expect(log(mocks.MSG)).toBe(mocks.LOG + ' ' + mocks.MSG)
+    expect(log(mocks.MSG)).toContain(mocks.LOG + ' ' + mocks.MSG)
   })
 
-  it('check exanded message log', () => {
-    expect(log(...mocks.MSGS)).toBe(mocks.LOG + ' ' + mocks.MSGS.join(' '))
-  })
-
-  it('checks info', () => {
-    expect(info(mocks.MSG)).toBe(mocks.INFO + ' ' + mocks.MSG)
+  it('check info with multiple messages', () => {
+    expect(info(...mocks.MSGS)).toBe(mocks.INFO + ' ' + mocks.MSGS.join(' '))
   })
 
   it('checks done', () => {
     expect(done(mocks.MSG)).toBe(mocks.DONE + ' ' + mocks.MSG)
+  })
+
+  it('checks debug', () => {
+    expect(debug(mocks.MSG)).toBe(mocks.DEBUG + ' ' + mocks.MSG)
   })
 
   it('checks pass', () => {
