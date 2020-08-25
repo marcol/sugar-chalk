@@ -12,9 +12,14 @@ function log (msg) {
 
 module.exports.clear = () => {
   const blank = '\n'.repeat(process.stdout.rows)
-  console.log(blank)
-  readline.cursorTo(process.stdout, 0, 0)
-  readline.clearScreenDown(process.stdout)
+
+  if (process.env.TEST) {
+    return blank
+  } else {
+    console.log(blank)
+    readline.cursorTo(process.stdout, 0, 0)
+    readline.clearScreenDown(process.stdout)
+  }
 }
 
 module.exports.done = (...msg) => {
@@ -43,8 +48,8 @@ module.exports.info = (...msg) => {
 }
 
 module.exports.log = (...msg) => {
-  msg.unshift('log', new Date().toLocaleTimeString(),
-    chalk.bgBlack.white.bold(' LOG '))
+  msg.unshift('log', chalk.bgBlack.white.bold(' LOG '),
+    new Date().toLocaleTimeString())
   return log(msg)
 }
 
