@@ -1,4 +1,4 @@
-const { chalk } = require('../sugar')
+const { chalk } = require('../index')
 const original = require('chalk')
 
 process.env.TEST = true

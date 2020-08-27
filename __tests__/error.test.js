@@ -1,4 +1,4 @@
-const { error } = require('../sugar')
+const { error } = require('../index')
 const { MSG, ERROR } = require('../__mocks__/mocks')
 
 process.env.TEST = true

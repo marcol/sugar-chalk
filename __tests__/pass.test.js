@@ -1,4 +1,4 @@
-const { pass } = require('../sugar')
+const { pass } = require('../index')
 const { MSG, PASS } = require('../__mocks__/mocks')
 
 process.env.TEST = true
