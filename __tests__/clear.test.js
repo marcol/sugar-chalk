@@ -1,4 +1,4 @@
-const { clear } = require('../sugar')
+const { clear } = require('../index')
 const { BLANK } = require('../__mocks__/mocks')
 
 process.env.TEST = true
