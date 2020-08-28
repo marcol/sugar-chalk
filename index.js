@@ -54,7 +54,7 @@ module.exports.log = (...msg) => {
 }
 
 module.exports.debug = (...msg) => {
-  msg.unshift('debug', chalk.bgMagenta.black.bold(' DEBUG '))
+  msg.unshift('debug', chalk.bgMagenta.white.bold(' DEBUG '))
   return log(msg)
 }
 
