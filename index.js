@@ -23,22 +23,22 @@ module.exports.clear = () => {
 }
 
 module.exports.done = (...msg) => {
-  msg.unshift('info', chalk.bgGreen.white.bold(' DONE '))
+  msg.unshift('info', chalk.bgGreen.black.bold(' DONE '))
   return log(msg)
 }
 
 module.exports.pass = (...msg) => {
-  msg.unshift('info', chalk.bgGreen.white.bold(' PASS '))
+  msg.unshift('info', chalk.bgGreen.black.bold(' PASS '))
   return log(msg)
 }
 
 module.exports.fail = (...msg) => {
-  msg.unshift('error', chalk.bgRed.white.bold(' FAIL '))
+  msg.unshift('error', chalk.bgRed.black.bold(' FAIL '))
   return log(msg)
 }
 
 module.exports.error = (...msg) => {
-  msg.unshift('error', chalk.bgRed.white.bold(' ERROR '))
+  msg.unshift('error', chalk.bgRed.black.bold(' ERROR '))
   return log(msg)
 }
 
@@ -54,12 +54,12 @@ module.exports.log = (...msg) => {
 }
 
 module.exports.debug = (...msg) => {
-  msg.unshift('debug', chalk.bgMagenta.white.bold(' DEBUG '))
+  msg.unshift('debug', chalk.bgMagenta.black.bold(' DEBUG '))
   return log(msg)
 }
 
 module.exports.warn = (...msg) => {
-  msg.unshift('warn', chalk.bgYellow.white.bold(' WARN '))
+  msg.unshift('warn', chalk.bgYellow.black.bold(' WARN '))
   return log(msg)
 }
 
