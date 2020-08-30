@@ -1,6 +1,6 @@
 {
   "name": "sugar-chalk",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "Sugar syntax for chalk",
   "keywords": [
     "chalk",
@@ -23,7 +23,8 @@
     "lint": "yarn lint:js && yarn lint:md",
     "lint:js": "eslint .",
     "lint:md": "remark .",
-    "test": "jest"
+    "test": "jest",
+    "sandbox": "node sandbox.js"
   },
   "dependencies": {
     "chalk": "^4.1.0"

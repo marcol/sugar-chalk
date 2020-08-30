@@ -2,6 +2,9 @@ const chalk = require('chalk')
 
 module.exports = {
   MSG: 'My test message',
+  OBJ: { a: 1, b: 2 },
+  FN: () => {},
+  ERR: new Error(),
   MSGS: ['1', '2', '3', '4'],
   LOG: chalk.bgBlack.white.bold(' LOG '),
   INFO: chalk.bgBlue.black.bold(' INFO '),
