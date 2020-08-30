@@ -49,7 +49,7 @@ module.exports.info = (...msg) => {
 
 module.exports.log = (...msg) => {
   msg.unshift('log', chalk.bgBlack.white.bold(' LOG '),
-    new Date().toLocaleTimeString())
+    chalk.blue(new Date().toLocaleTimeString()))
   return log(msg)
 }
 

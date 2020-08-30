@@ -3,54 +3,73 @@
 [![CI Tests](https://img.shields.io/github/workflow/status/marcol/sugar-chalk/CI?logo=github&style=flat-square)](https://github.com/marcol/sugar-chalk)
 
 # sugar-chalk
-Sugar syntax for [Chalk](https://github.com/chalk/chalk)
+
+Sugar syntax for [Chalk](https://github.com/chalk/chalk). Take advantage of the usage of `console` and send objects, arrays... Make your logs more readable with a leading tag categorising the type of log.
 
 ## Install
+
 ```bash
 yarn add sugar-chalk --dev
 ```
-or
-```bash
-npm install sugar-chalk --save-dev
-```
+
+or if you are using npm: `npm install sugar-chalk --save-dev`
+
 
 ## Usage
+
 ```js
-const { info } = require('sugar-chalk')
+const { info, error } = require('sugar-chalk')
 
 info('Started script', 'Some message', 'Some other message')
+info({ a: 1, b:2 })
+error(Error)
 ```
 
 ## API
-### `chalk('message')`
-Alias to [Chalk](https://github.com/chalk/chalk)
 
-### `clear()`
+#### `chalk`
+
+[Chalk](https://github.com/chalk/chalk) alias.
+```js
+console.log(chalk.blue('message'))
+```
+
+#### `clear()`
+
 Clears screen.
 
-### `done('message')`
+#### `done({*}, {*}...)`
+
 Sends message (`console.info`) with prefix DONE.
 
-### `fail('message')`
+#### `fail({*}, {*}...)`
+
 Sends message (`console.error`) with prefix FAIL.
 
-### `pass('message')`
+#### `pass({*}, {*}...)`
+
 Sends message (`console.info`) with prefix PASS.
 
-### `error('message')`
+#### `error({*}, {*}...)`
+
 Sends message (`console.error`) with prefix ERROR.
 
-### `info('message')`
+#### `info({*}, {*}...)`
+
 Sends message (`console.info`) with prefix INFO.
 
-### `log('message')`
+#### `log({*}, {*}...)`
+
 Log message (`console.log`) with prefix LOG and time of the log.
 
-### `debug('message')`
+#### `debug({*}, {*}...)`
+
 Log message (`console.debug`) with prefix DEBUG.
 
-### `warn('message')`
+#### `warn({*}, {*}...)`
+
 Log message (`console.warn`) with prefix WARN.
 
-### Suppress logs
+#### Suppressing logs
+
 You can suppress logs by setting `process.env.TEST` to true.
