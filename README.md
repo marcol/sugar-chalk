@@ -4,7 +4,9 @@
 
 # sugar-chalk
 
-Sugar syntax for [Chalk](https://github.com/chalk/chalk). Take advantage of the usage of `console` and send objects, arrays... Make your logs more readable with a leading tag categorising the type of log.
+Sugar syntax for [Chalk](https://github.com/chalk/chalk). Take advantage of the
+usage of `console` and send objects, arrays... Make your logs more readable
+with a leading tag categorising the type of log.
 
 ## Install
 
@@ -13,7 +15,6 @@ yarn add sugar-chalk --dev
 ```
 
 or if you are using npm: `npm install sugar-chalk --save-dev`
-
 
 ## Usage
 
