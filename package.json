@@ -23,8 +23,8 @@
     "lint": "yarn lint:js && yarn lint:md",
     "lint:js": "eslint .",
     "lint:md": "remark .",
-    "test": "jest **/*.test.js",
-    "sandbox": "node __tests__/sandbox.js"
+    "test": "jest",
+    "sandbox": "node sandbox.js"
   },
   "dependencies": {
     "chalk": "^4.1.0"
