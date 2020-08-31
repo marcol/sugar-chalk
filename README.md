@@ -39,35 +39,35 @@ console.log(chalk.blue('message'))
 
 Clears screen.
 
-#### `done({*}, {*}...)`
+#### `done({...*})`
 
 Sends message (`console.info`) with prefix DONE.
 
-#### `fail({*}, {*}...)`
+#### `fail({...*})`
 
 Sends message (`console.error`) with prefix FAIL.
 
-#### `pass({*}, {*}...)`
+#### `pass({...*})`
 
 Sends message (`console.info`) with prefix PASS.
 
-#### `error({*}, {*}...)`
+#### `error({...*})`
 
 Sends message (`console.error`) with prefix ERROR.
 
-#### `info({*}, {*}...)`
+#### `info({...*})`
 
 Sends message (`console.info`) with prefix INFO.
 
-#### `log({*}, {*}...)`
+#### `log({...*})`
 
 Log message (`console.log`) with prefix LOG and time of the log.
 
-#### `debug({*}, {*}...)`
+#### `debug({...*})`
 
 Log message (`console.debug`) with prefix DEBUG.
 
-#### `warn({*}, {*}...)`
+#### `warn({...*})`
 
 Log message (`console.warn`) with prefix WARN.
 
