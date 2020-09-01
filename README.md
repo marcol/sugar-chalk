@@ -39,21 +39,21 @@ console.log(chalk.blue('message'))
 
 Clears screen.
 
+#### `debug({...*})`
+
+Log message (`console.debug`) with prefix DEBUG.
+
 #### `done({...*})`
 
 Sends message (`console.info`) with prefix DONE.
 
-#### `fail({...*})`
-
-Sends message (`console.error`) with prefix FAIL.
-
-#### `pass({...*})`
-
-Sends message (`console.info`) with prefix PASS.
-
 #### `error({...*})`
 
 Sends message (`console.error`) with prefix ERROR.
+
+#### `fail({...*})`
+
+Sends message (`console.error`) with prefix FAIL.
 
 #### `info({...*})`
 
@@ -63,9 +63,14 @@ Sends message (`console.info`) with prefix INFO.
 
 Log message (`console.log`) with prefix LOG and time of the log.
 
-#### `debug({...*})`
+#### `pass({...*})`
 
-Log message (`console.debug`) with prefix DEBUG.
+Sends message (`console.info`) with prefix PASS.
+
+### `silent(true|false)`
+
+Silences logs and receives messages as returns. This is ideal to use with
+other tools like ORA.
 
 #### `warn({...*})`
 
@@ -73,4 +78,4 @@ Log message (`console.warn`) with prefix WARN.
 
 #### Suppressing logs
 
-You can suppress logs by setting `process.env.TEST` to true.
+You can suppress logs by calling silent() or setting `process.env.TEST` to true.

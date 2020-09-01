@@ -1,6 +1,10 @@
-const { log, done, error } = require('./index')
+const { log, done, error, silent } = require('./index')
 const { MSG, ERR, OBJ } = require('./__mocks__/mocks')
 
 log(OBJ)
 error(ERR)
 done(MSG)
+silent(true)
+log('Silent mode - should not be visible')
+silent(false)
+log('Ended silent mode - message should be visible')
