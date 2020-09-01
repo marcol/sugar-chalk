@@ -1,13 +1,18 @@
 const chalk = require('chalk')
 const readline = require('readline')
+let silent = process.env.TEST
 
 function log (msg) {
   const fn = msg.shift()
-  if (process.env.TEST) {
+  if (silent) {
     return msg.join(' ')
   } else {
     return console[fn].apply(null, msg)
   }
+}
+
+module.exports.silent = (state = true) => {
+  silent = state
 }
 
 module.exports.clear = () => {
