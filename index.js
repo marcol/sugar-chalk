@@ -1,10 +1,10 @@
 const chalk = require('chalk')
 const readline = require('readline')
-let silent = process.env.TEST
+let silent = false
 
 function log (msg) {
   const fn = msg.shift()
-  if (silent) {
+  if (process.env.TEST || silent) {
     return msg.join(' ')
   } else {
     return console[fn].apply(null, msg)
