@@ -28,42 +28,42 @@ error(Error)
 
 ## API
 
-#### `chalk`
+### `chalk`
 
 [Chalk](https://github.com/chalk/chalk) alias.
 ```js
 console.log(chalk.blue('message'))
 ```
 
-#### `clear()`
+### `clear()`
 
 Clears screen.
 
-#### `debug({...*})`
+### `debug({...*})`
 
 Log message (`console.debug`) with prefix DEBUG.
 
-#### `done({...*})`
+### `done({...*})`
 
 Sends message (`console.info`) with prefix DONE.
 
-#### `error({...*})`
+### `error({...*})`
 
 Sends message (`console.error`) with prefix ERROR.
 
-#### `fail({...*})`
+### `fail({...*})`
 
 Sends message (`console.error`) with prefix FAIL.
 
-#### `info({...*})`
+### `info({...*})`
 
 Sends message (`console.info`) with prefix INFO.
 
-#### `log({...*})`
+### `log({...*})`
 
 Log message (`console.log`) with prefix LOG and time of the log.
 
-#### `pass({...*})`
+### `pass({...*})`
 
 Sends message (`console.info`) with prefix PASS.
 
@@ -72,10 +72,10 @@ Sends message (`console.info`) with prefix PASS.
 Silences logs and receives messages as returns. This is ideal to use with
 other tools like ORA.
 
-#### `warn({...*})`
+### `warn({...*})`
 
 Log message (`console.warn`) with prefix WARN.
 
-#### Suppressing logs
+### Suppressing logs
 
 You can suppress logs by calling silent() or setting `process.env.TEST` to true.
