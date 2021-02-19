@@ -49,12 +49,5 @@
     "remark-cli": "^9.0.0",
     "remark-lint": "^8.0.0",
     "remark-preset-lint-markdown-style-guide": "^4.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "yarn test",
-      "pre-commit": "yarn lint",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   }
 }
