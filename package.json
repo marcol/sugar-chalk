@@ -1,6 +1,6 @@
 {
   "name": "sugar-chalk",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "Sugar syntax for chalk",
   "keywords": [
     "chalk",
@@ -24,8 +24,7 @@
     "lint:js": "eslint .",
     "lint:md": "remark .",
     "test": "jest",
-    "sandbox": "node sandbox.js",
-    "postinstall": "husky install"
+    "sandbox": "node sandbox.js"
   },
   "dependencies": {
     "chalk": "^4.1.0"
