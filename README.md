@@ -79,3 +79,7 @@ Log message (`console.warn`) with prefix WARN.
 ### Suppressing logs
 
 You can suppress logs by calling silent() or setting `process.env.TEST` to true.
+
+## Development
+If you want to develop to the package you need to install the Husky's hooks by
+running `yarn husky install` or `npx husky install`.
