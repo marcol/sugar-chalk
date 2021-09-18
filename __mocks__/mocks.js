@@ -3,8 +3,9 @@ const chalk = require('chalk')
 module.exports = {
   MSG: 'My test message',
   OBJ: { a: 1, b: 2 },
+  ARR: [1, 2, 3],
   FN: () => {},
-  ERR: new Error(),
+  ERR: new Error('Could not parse input'),
   MSGS: ['1', '2', '3', '4'],
   LOG: chalk.bgBlack.white.bold(' LOG '),
   INFO: chalk.bgBlue.black.bold(' INFO '),
