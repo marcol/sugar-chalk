@@ -1,5 +1,5 @@
-const { info } = require('../index')
-const { MSGS, OBJ, FN, ERR, INFO } = require('../__mocks__/mocks')
+const { info, error } = require('../index')
+const { MSGS, OBJ, ARR, ERR, INFO } = require('../__mocks__/mocks')
 
 process.env.TEST = true
 
@@ -9,14 +9,14 @@ describe('tests arguments functionality', () => {
   })
 
   test('tests object', () => {
-    expect(info(OBJ)).toContain(OBJ)
+    expect(info(OBJ)).toContain(JSON.stringify(OBJ))
+  })
+
+  test('test array', () => {
+    expect(info(ARR)).toContain(JSON.stringify(ARR))
   })
 
   test('tests error', () => {
-    expect(info(ERR)).toContain(ERR)
-  })
-
-  test('tests function', () => {
-    expect(info(FN)).toContain(FN)
+    expect(error(ERR)).toContain(ERR.message)
   })
 })

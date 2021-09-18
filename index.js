@@ -4,11 +4,21 @@ let silent = false
 
 function log (msg) {
   const fn = msg.shift()
-  if (process.env.TEST || silent) {
-    return msg.join(' ')
-  } else {
-    return console[fn].apply(null, msg)
+  msg = msg.map((current) => {
+    if (current && current instanceof Error) {
+      // return previous.concat(' ', current.message)
+      return current
+    } else if (current && typeof current === 'object') {
+      return JSON.stringify(current)
+    } else {
+      return current
+    }
+  })
+
+  if (!process.env.TEST && !silent) {
+    console[fn].apply(null, msg)
   }
+  return msg.join(' ')
 }
 
 module.exports.silent = (state = true) => {
