@@ -1,6 +1,6 @@
 import ogchalk from 'chalk'
 import readline from 'readline'
-const isSilent = false
+let isSilent = false
 
 function show (msg) {
   const fn = msg.shift()
@@ -22,13 +22,14 @@ function show (msg) {
 }
 
 export const silent = (state = true) => {
-  silent = state
+  isSilent = state
+  return isSilent
 }
 
 export const clear = () => {
   const blank = '\n'.repeat(process.stdout.rows)
 
-  if (process.env.TEST) {
+  if (process.env.TEST && process.env.TEST !== 'false') {
     return blank
   } else {
     console.log(blank)

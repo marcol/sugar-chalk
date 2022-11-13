@@ -8,4 +8,9 @@ describe('tests sugar chalk functionality', () => {
   it('checks clear', () => {
     expect(clear()).toBe(mock.BLANK)
   })
+
+  it('checks clear without TEST global var', () => {
+    process.env.TEST = false
+    expect(clear()).toBeUndefined()
+  })
 })
