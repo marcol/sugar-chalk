@@ -39,32 +39,32 @@ export const clear = () => {
 }
 
 export const done = (...msg) => {
-  msg.unshift('info', ogchalk.bgGreen.black.bold(' DONE '))
+  msg.unshift('info', ogchalk.bgGreen.white.bold(' DONE  '))
   return show(msg)
 }
 
 export const pass = (...msg) => {
-  msg.unshift('info', ogchalk.bgGreen.black.bold(' PASS '))
+  msg.unshift('info', ogchalk.bgGreen.white.bold(' PASS  '))
   return show(msg)
 }
 
 export const fail = (...msg) => {
-  msg.unshift('error', ogchalk.bgRed.black.bold(' FAIL '))
+  msg.unshift('error', ogchalk.bgRed.white.bold(' FAIL  '))
   return show(msg)
 }
 
 export const error = (...msg) => {
-  msg.unshift('error', ogchalk.bgRed.black.bold(' ERROR '))
+  msg.unshift('error', ogchalk.bgRed.white.bold(' ERROR '))
   return show(msg)
 }
 
 export const info = (...msg) => {
-  msg.unshift('info', ogchalk.bgBlue.black.bold(' INFO '))
+  msg.unshift('info', ogchalk.bgBlue.white.bold(' INFO  '))
   return show(msg)
 }
 
 export const log = (...msg) => {
-  msg.unshift('log', ogchalk.bgBlack.white.bold(' LOG '),
+  msg.unshift('log', ogchalk.bgBlack.white.bold(' LOG   '),
     ogchalk.blue(new Date().toLocaleTimeString()))
   return show(msg)
 }
@@ -75,7 +75,7 @@ export const debug = (...msg) => {
 }
 
 export const warn = (...msg) => {
-  msg.unshift('warn', ogchalk.bgYellow.black.bold(' WARN '))
+  msg.unshift('warn', ogchalk.bgYellow.black.bold(' WARN  '))
   return show(msg)
 }
 

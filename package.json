@@ -19,6 +19,7 @@
     "url": "https://github.com/marcol/sugar-chalk.git"
   },
   "author": "Marco Dias Lopes <rhino@pacodacomenda.com>",
+  "type": "module",
   "scripts": {
     "lint": "yarn lint:js && yarn lint:md",
     "lint:js": "eslint .",
