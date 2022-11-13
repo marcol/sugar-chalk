@@ -1,15 +1,16 @@
-const { log } = require('../index')
-const { LOG, MSG } = require('../__mocks__/mocks')
+import { describe, expect, it } from 'vitest'
+import { log } from '../index'
+import mock from '../__mocks__/mocks'
 
 process.env.TEST = true
 
 describe('tests log functionality', () => {
   it('checks log message', () => {
-    expect(log(MSG)).toContain(LOG)
-    expect(log(MSG)).toContain(MSG)
+    expect(log(mock.MSG)).toContain(mock.LOG)
+    expect(log(mock.MSG)).toContain(mock.MSG)
   })
 
   it('check time in message', () => {
-    expect(log(MSG)).toMatch(/^.+\d{1,2}:\d{1,2}:\d{1,2}.*/)
+    expect(log(mock.MSG)).toMatch(/^.+\d{1,2}:\d{1,2}:\d{1,2}.*/)
   })
 })

@@ -1,10 +1,11 @@
-const { pass } = require('../index')
-const { MSG, PASS } = require('../__mocks__/mocks')
+import { describe, expect, it } from 'vitest'
+import { pass } from '../index'
+import mock from '../__mocks__/mocks'
 
 process.env.TEST = true
 
 describe('tests pass functionality', () => {
   it('checks pass', () => {
-    expect(pass(MSG)).toBe(PASS + ' ' + MSG)
+    expect(pass(mock.MSG)).toBe(mock.PASS + ' ' + mock.MSG)
   })
 })

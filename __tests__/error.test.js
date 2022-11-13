@@ -1,10 +1,11 @@
-const { error } = require('../index')
-const { MSG, ERROR } = require('../__mocks__/mocks')
+import { describe, expect, it } from 'vitest'
+import { error } from '../index'
+import mock from '../__mocks__/mocks'
 
 process.env.TEST = true
 
 describe('tests error functionality', () => {
   it('checks error', () => {
-    expect(error(MSG)).toBe(ERROR + ' ' + MSG)
+    expect(error(mock.MSG)).toBe(mock.ERROR + ' ' + mock.MSG)
   })
 })

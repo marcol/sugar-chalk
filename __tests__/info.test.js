@@ -1,10 +1,11 @@
-const { info } = require('../index')
-const { MSG, INFO } = require('../__mocks__/mocks')
+import { describe, expect, it } from 'vitest'
+import { info } from '../index'
+import mock from '../__mocks__/mocks'
 
 process.env.TEST = true
 
 describe('tests info functionality', () => {
-  test('checks info', () => {
-    expect(info(MSG)).toContain(INFO + ' ' + MSG)
+  it('checks info', () => {
+    expect(info(mock.MSG)).toContain(mock.INFO + ' ' + mock.MSG)
   })
 })

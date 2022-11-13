@@ -1,10 +1,11 @@
-const { debug } = require('../index')
-const { MSG, DEBUG } = require('../__mocks__/mocks')
+import { describe, expect, it } from 'vitest'
+import { debug } from '../index'
+import mock from '../__mocks__/mocks'
 
 process.env.TEST = true
 
 describe('tests debug functionality', () => {
   it('checks debug', () => {
-    expect(debug(MSG)).toBe(DEBUG + ' ' + MSG)
+    expect(debug(mock.MSG)).toBe(mock.DEBUG + ' ' + mock.MSG)
   })
 })

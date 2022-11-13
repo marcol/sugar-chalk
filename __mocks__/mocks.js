@@ -1,6 +1,6 @@
-const chalk = require('chalk')
+import chalk from 'chalk'
 
-module.exports = {
+export default {
   MSG: 'My test message',
   OBJ: { a: 1, b: 2 },
   ARR: [1, 2, 3],
