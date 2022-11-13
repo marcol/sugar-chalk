@@ -1,8 +1,8 @@
-const chalk = require('chalk')
-const readline = require('readline')
-let silent = false
+import ogchalk from 'chalk'
+import readline from 'readline'
+let isSilent = false
 
-function log (msg) {
+function show (msg) {
   const fn = msg.shift()
   msg = msg.map((current) => {
     if (current && current instanceof Error) {
@@ -15,20 +15,21 @@ function log (msg) {
     }
   })
 
-  if (!process.env.TEST && !silent) {
+  if (!process.env.TEST && !isSilent) {
     console[fn].apply(null, msg)
   }
   return msg.join(' ')
 }
 
-module.exports.silent = (state = true) => {
-  silent = state
+export const silent = (state = true) => {
+  isSilent = state
+  return isSilent
 }
 
-module.exports.clear = () => {
+export const clear = () => {
   const blank = '\n'.repeat(process.stdout.rows)
 
-  if (process.env.TEST) {
+  if (process.env.TEST && process.env.TEST !== 'false') {
     return blank
   } else {
     console.log(blank)
@@ -37,45 +38,44 @@ module.exports.clear = () => {
   }
 }
 
-module.exports.done = (...msg) => {
-  msg.unshift('info', chalk.bgGreen.black.bold(' DONE '))
-  return log(msg)
+export const done = (...msg) => {
+  msg.unshift('info', ogchalk.white.bold(' DONE'), ogchalk.green.bold('●'))
+  return show(msg)
 }
 
-module.exports.pass = (...msg) => {
-  msg.unshift('info', chalk.bgGreen.black.bold(' PASS '))
-  return log(msg)
+export const pass = (...msg) => {
+  msg.unshift('info', ogchalk.white.bold(' PASS'), ogchalk.green.bold('●'))
+  return show(msg)
 }
 
-module.exports.fail = (...msg) => {
-  msg.unshift('error', chalk.bgRed.black.bold(' FAIL '))
-  return log(msg)
+export const fail = (...msg) => {
+  msg.unshift('error', ogchalk.white.bold(' FAIL'), ogchalk.red.bold('●'))
+  return show(msg)
 }
 
-module.exports.error = (...msg) => {
-  msg.unshift('error', chalk.bgRed.black.bold(' ERROR '))
-  return log(msg)
+export const error = (...msg) => {
+  msg.unshift('error', ogchalk.white.bold('ERROR'), ogchalk.red.bold('●'))
+  return show(msg)
 }
 
-module.exports.info = (...msg) => {
-  msg.unshift('info', chalk.bgBlue.black.bold(' INFO '))
-  return log(msg)
+export const info = (...msg) => {
+  msg.unshift('info', ogchalk.white.bold(' INFO'), ogchalk.blue.bold('●'))
+  return show(msg)
 }
 
-module.exports.log = (...msg) => {
-  msg.unshift('log', chalk.bgBlack.white.bold(' LOG '),
-    chalk.blue(new Date().toLocaleTimeString()))
-  return log(msg)
+export const log = (...msg) => {
+  msg.unshift('log', ogchalk.white.bold('  LOG'), ogchalk.black.bold('●'), ogchalk.blackBright(new Date().toLocaleTimeString()))
+  return show(msg)
 }
 
-module.exports.debug = (...msg) => {
-  msg.unshift('debug', chalk.bgMagenta.white.bold(' DEBUG '))
-  return log(msg)
+export const debug = (...msg) => {
+  msg.unshift('debug', ogchalk.white.bold('DEBUG'), ogchalk.magenta.bold('●'))
+  return show(msg)
 }
 
-module.exports.warn = (...msg) => {
-  msg.unshift('warn', chalk.bgYellow.black.bold(' WARN '))
-  return log(msg)
+export const warn = (...msg) => {
+  msg.unshift('warn', ogchalk.white.bold(' WARN'), ogchalk.yellow.bold('●'))
+  return show(msg)
 }
 
-module.exports.chalk = chalk
+export const chalk = ogchalk

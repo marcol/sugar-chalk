@@ -1,5 +1,6 @@
-const { chalk } = require('../index')
-const original = require('chalk')
+import { describe, expect, it } from 'vitest'
+import { chalk } from '../index'
+import original from 'chalk'
 
 process.env.TEST = true
 

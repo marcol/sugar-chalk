@@ -2,8 +2,7 @@
   "env": {
     "browser": true,
     "node": true,
-    "es6": true,
-    "jest/globals": true
+    "es6": true
   },
   "extends": "standard",
   "globals": {
@@ -15,11 +14,10 @@
     "sourceType": "module"
   },
   "plugins": [
-    "html",
     "markdown",
     "json-format",
     "filenames",
-    "jest"
+    "vitest"
   ],
   "rules": {
     "indent": ["warn", 2],
