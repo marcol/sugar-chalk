@@ -39,43 +39,42 @@ export const clear = () => {
 }
 
 export const done = (...msg) => {
-  msg.unshift('info', ogchalk.bgGreen.white.bold(' DONE  '))
+  msg.unshift('info', ogchalk.white.bold(' DONE'), ogchalk.green.bold('●'))
   return show(msg)
 }
 
 export const pass = (...msg) => {
-  msg.unshift('info', ogchalk.bgGreen.white.bold(' PASS  '))
+  msg.unshift('info', ogchalk.white.bold(' PASS'), ogchalk.green.bold('●'))
   return show(msg)
 }
 
 export const fail = (...msg) => {
-  msg.unshift('error', ogchalk.bgRed.white.bold(' FAIL  '))
+  msg.unshift('error', ogchalk.white.bold(' FAIL'), ogchalk.red.bold('●'))
   return show(msg)
 }
 
 export const error = (...msg) => {
-  msg.unshift('error', ogchalk.bgRed.white.bold(' ERROR '))
+  msg.unshift('error', ogchalk.white.bold('ERROR'), ogchalk.red.bold('●'))
   return show(msg)
 }
 
 export const info = (...msg) => {
-  msg.unshift('info', ogchalk.bgBlue.white.bold(' INFO  '))
+  msg.unshift('info', ogchalk.white.bold(' INFO'), ogchalk.blue.bold('●'))
   return show(msg)
 }
 
 export const log = (...msg) => {
-  msg.unshift('log', ogchalk.bgBlack.white.bold(' LOG   '),
-    ogchalk.blue(new Date().toLocaleTimeString()))
+  msg.unshift('log', ogchalk.white.bold('  LOG'), ogchalk.black.bold('●'), ogchalk.blackBright(new Date().toLocaleTimeString()))
   return show(msg)
 }
 
 export const debug = (...msg) => {
-  msg.unshift('debug', ogchalk.bgMagenta.white.bold(' DEBUG '))
+  msg.unshift('debug', ogchalk.white.bold('DEBUG'), ogchalk.magenta.bold('●'))
   return show(msg)
 }
 
 export const warn = (...msg) => {
-  msg.unshift('warn', ogchalk.bgYellow.black.bold(' WARN  '))
+  msg.unshift('warn', ogchalk.white.bold(' WARN'), ogchalk.yellow.bold('●'))
   return show(msg)
 }
 
