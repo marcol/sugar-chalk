@@ -1,4 +1,4 @@
-import { log, info, debug, done, pass, warn, error, fail, silent } from './index.js'
+import { log, info, debug, done, pass, warn, error, fail, silent } from './src/index.js'
 import mock from './__mocks__/mocks.js'
 
 log(mock.OBJ)
