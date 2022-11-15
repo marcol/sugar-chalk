@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { silent } from '../index'
+import { silent } from '../src/index'
 
 describe('tests silencing functionality', () => {
   it('tests silence on', () => {

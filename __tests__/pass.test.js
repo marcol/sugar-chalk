@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { pass } from '../index'
+import { pass } from '../src/index'
 import mock from '../__mocks__/mocks'
 
 process.env.TEST = true

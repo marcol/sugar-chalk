@@ -20,13 +20,24 @@
   },
   "author": "Marco Dias Lopes <rhino@pacodacomenda.com>",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "lint": "yarn lint:js && yarn lint:md",
     "lint:js": "eslint .",
     "lint:md": "remark .",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "sandbox": "node sandbox.js"
+    "sandbox": "node sandbox.js",
+    "build": "rollup --config rollup.config.js"
   },
   "dependencies": {
     "chalk": "^5.1.2"
@@ -50,6 +61,7 @@
     "remark-cli": "^11.0.0",
     "remark-lint": "^9.1.1",
     "remark-preset-lint-markdown-style-guide": "^5.1.2",
+    "rollup": "^3.3.0",
     "vitest": "^0.25.1"
   },
   "resolutions": {

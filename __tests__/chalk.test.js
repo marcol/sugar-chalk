@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { chalk } from '../index'
+import { chalk } from '../src/index'
 import original from 'chalk'
 
 process.env.TEST = true

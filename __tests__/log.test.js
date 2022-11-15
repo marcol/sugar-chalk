@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { log } from '../index'
+import { log } from '../src/index'
 import mock from '../__mocks__/mocks'
 
 process.env.TEST = true
