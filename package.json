@@ -1,6 +1,6 @@
 {
   "name": "sugar-chalk",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Sugar syntax for chalk",
   "keywords": [
     "chalk",
@@ -36,11 +36,11 @@
     "lint:md": "remark .",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "sandbox": "node sandbox.js",
+    "sandbox": "node sandbox.js && node sandbox.cjs",
     "build": "rollup --config rollup.config.js"
   },
   "dependencies": {
-    "chalk": "^5.1.2"
+    "chalk": "^4.1.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.2.0",
