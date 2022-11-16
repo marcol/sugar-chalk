@@ -1,5 +1,8 @@
-import { log, info, debug, done, pass, warn, error, fail, silent } from './dist/index.mjs'
-import mock from './__mocks__/mocks.js'
+const { log, info, debug, done, pass, warn, error, fail, silent } = require('./dist/index.cjs')
+const mock = {
+  OBJ: { a: 1, b: 2 },
+  MSG: 'My test message'
+}
 
 log(mock.OBJ)
 info(mock.MSG)
