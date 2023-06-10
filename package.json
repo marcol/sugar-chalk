@@ -36,7 +36,7 @@
     "lint:md": "remark .",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "sandbox": "node sandbox.js && node sandbox.cjs",
+    "sandbox": "node sandbox.js",
     "build": "rollup --config rollup.config.js"
   },
   "dependencies": {
@@ -45,6 +45,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
+    "@rollup/plugin-node-resolve": "^15.1.0",
     "@vitest/coverage-v8": "^0.32.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^8.42.0",
