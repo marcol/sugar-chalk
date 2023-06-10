@@ -18,6 +18,7 @@ function show (msg) {
   if (!process.env.TEST && !isSilent) {
     console[fn].apply(null, msg)
   }
+
   return msg.join(' ')
 }
 
