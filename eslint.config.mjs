@@ -34,15 +34,6 @@ export default [
         ...globals.browser,
         ...globals.node
       }
-      // globals: {
-      //     ...globals.browser,
-      //     ...globals.node,
-      //     Atomics: "readonly",
-      //     SharedArrayBuffer: "readonly",
-      // },
-
-      // ecmaVersion: 2018,
-      // sourceType: "module",
     },
 
     settings: {

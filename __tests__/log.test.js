@@ -6,7 +6,7 @@ process.env.TEST = true
 
 describe('tests log functionality', () => {
   it('checks log message', () => {
-    expect(log(mock.MSG)).toContain(mock.LOG)
+    expect(log(mock.LOG)).toContain(mock.LOG)
     expect(log(mock.MSG)).toContain(mock.MSG)
   })
 
