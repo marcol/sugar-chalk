@@ -1,6 +1,6 @@
 [![NPM Downloads](https://img.shields.io/npm/dt/sugar-chalk?logo=npm&style=flat-square)](https://www.npmjs.com/package/sugar-chalk)
 [![NPM Version](https://img.shields.io/npm/v/sugar-chalk?logo=npm&style=flat-square)](https://www.npmjs.com/package/sugar-chalk)
-[![CI Tests](https://img.shields.io/github/workflow/status/marcol/sugar-chalk/CI?logo=github&style=flat-square)](https://github.com/marcol/sugar-chalk)
+[![CI Tests](https://img.shields.io/github/actions/workflow/status/marcol/sugar-chalk/.github/workflows/ci.yml?branch=main&logo=github&style=flat-square)](https://github.com/marcol/sugar-chalk)
 
 # sugar-chalk
 
